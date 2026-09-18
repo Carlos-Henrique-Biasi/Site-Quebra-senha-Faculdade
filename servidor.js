@@ -1,13 +1,13 @@
 const express = require('express');
-const loginRoutes = require('./routes/loginRoutes');
-const cadastroRoutes = require('./routes/cadastroRoutes');
+const loginRoutes = require('./Routes/loginRoutes');
+const cadastroRoutes = require('./Routes/cadastroRoutes');
 
 const app = express();
 const PORT = 3000;
 
 // Configurações para ler JSON e exibir o Frontend
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('Front-end'));
 
 // Engata o arquivo de rotas com o prefixo '/api'
 // Substitua o app.use('/api', authRoutes) por estes dois:

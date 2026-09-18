@@ -1,4 +1,4 @@
-const db = require('../config/db');
+const db = require('../Data/data.js');
 
 const cadastrar = async (req, res) => {
     const { username, password } = req.body;

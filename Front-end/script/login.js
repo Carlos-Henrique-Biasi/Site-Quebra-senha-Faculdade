@@ -4,10 +4,10 @@ document.getElementById('login-form').addEventListener('submit', async function(
     // Pega os valores dos inputs
     const user = document.getElementById('username').value;
     const pass = document.getElementById('password').value;
-    const mensagemEl = document.getElementById('mensagem');
+    const respostaEl = document.getElementById('resposta');
 
-    mensagemEl.innerText = "Quebrando a senha";
-    mensagemEl.style.color = "black";
+    respostaElEl.innerText = "Quebrando a senha";
+    respostaElEl.style.color = "black";
 
     try {
         // Envia os dados para o nosso servidor Node.js na rota /api/login
@@ -23,13 +23,13 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
         // Verifica se deu certo ou errado
         if (resposta.ok) {
-            mensagemEl.innerText = "SUCESSO: " + dados.message;
-            mensagemEl.style.color = "green";
+            respostaElmensagemEl.innerText = "SUCESSO: " + dados.message;
+            respostaEl.style.color = "green";
         } else {
-            mensagemEl.innerText = "FALHA: " + dados.message;
-            mensagemEl.style.color = "red";
+            respostaEl.innerText = "FALHA: " + dados.message;
+            respostaEl.style.color = "red";
         }
     } catch (error) {
-        mensagemEl.innerText = "Erro ao conectar com o servidor.";
+        alert = "Erro ao conectar com o servidor.";
     }
 });

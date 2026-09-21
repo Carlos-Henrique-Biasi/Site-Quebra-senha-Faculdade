@@ -1,6 +1,6 @@
 const express = require('express');
-const loginRoutes = require('./Routes/loginRoutes');
-const cadastroRoutes = require('./Routes/cadastroRoutes');
+const loginRoutes = require('./Routes/loginRoute');
+const cadastroRoutes = require('./Routes/cadastroRoute');
 
 const app = express();
 const PORT = 3000;

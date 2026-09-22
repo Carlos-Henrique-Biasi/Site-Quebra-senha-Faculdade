@@ -16,7 +16,10 @@ document.getElementById('botaoLogin').addEventListener('click', async function(e
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username: user, password: pass })
+            body: JSON.stringify({ 
+                username: user, 
+                password: pass 
+            })
         });
 
         const dados = await resposta.json();

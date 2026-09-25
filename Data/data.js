@@ -4,8 +4,8 @@ const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'SuaSenhaDoMySQLAqui', 
-    database: 'projeto_faculdade',
+    password: 'Biasi.2008', 
+    database: 'quebra_senha',
     waitForConnections: true,
     connectionLimit: 100, // Permite até 10 requisições simultâneas
     queueLimit: 0

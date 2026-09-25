@@ -3,11 +3,9 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
     // Pega os valores dos inputs
     const user = document.getElementById('username').value;
-    const pass = document.getElementById('password').value;
+    const senha = document.getElementById('password').value;
     const respostaEl = document.getElementById('resposta');
 
-    respostaElEl.innerText = "Quebrando a senha";
-    respostaElEl.style.color = "black";
 
     try {
         // Envia os dados para o nosso servidor Node.js na rota /api/login
@@ -16,7 +14,10 @@ document.getElementById('login-form').addEventListener('submit', async function(
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username: user, password: pass })
+            body: JSON.stringify({
+                 username: user,
+                 senha : senha
+                })
         });
 
         const dados = await resposta.json();

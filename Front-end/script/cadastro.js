@@ -1,13 +1,10 @@
-document.getElementById('botaoLogin').addEventListener('click', async function(event) {
+document.getElementById('botaoCadastro').addEventListener('click', async function(event) {
     event.preventDefault();
 
     // Pega os valores dos inputs definidos no seu HTML
     const user = document.getElementById('inputUsuario').value;
-    const pass = document.getElementById('inputSenha').value;
+    const senhaDigitada = document.getElementById('inputSenha').value;
     const mensagemEl = document.getElementById('mensagem');
-
-    mensagemEl.innerText = "Cadastrando...";
-    mensagemEl.style.color = "black";
 
     try {
         // Envia os dados para a rota de cadastro no Node.js
@@ -18,7 +15,7 @@ document.getElementById('botaoLogin').addEventListener('click', async function(e
             },
             body: JSON.stringify({ 
                 username: user, 
-                password: pass 
+                senha: senhaDigitada 
             })
         });
 
@@ -28,6 +25,9 @@ document.getElementById('botaoLogin').addEventListener('click', async function(e
         if (resposta.ok) {
             mensagemEl.innerText = "SUCESSO: " + dados.message;
             mensagemEl.style.color = "green";
+            setTimeout(()=>{
+                window.location.href = 'Login.html'
+            }, 2500)
         } else {
             mensagemEl.innerText = "FALHA: " + dados.message;
             mensagemEl.style.color = "red";

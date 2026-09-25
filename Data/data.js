@@ -1,4 +1,5 @@
-const mysql = require('mysql2/promise');
+require('dotenv').config();
+const mysql = require('mysql2');
 
 // Cria um pool de conexões com o banco de dados
 const pool = mysql.createPool({
@@ -7,8 +8,8 @@ const pool = mysql.createPool({
     password: 'Biasi.2008', 
     database: 'quebra_senha',
     waitForConnections: true,
-    connectionLimit: 100, // Permite até 10 requisições simultâneas
+    connectionLimit: 10,
     queueLimit: 0
 });
 
-module.exports = pool;
+module.exports = conexao.promise();

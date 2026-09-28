@@ -1,5 +1,5 @@
 require('dotenv').config();
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 // Cria um pool de conexões com o banco de dados
 const pool = mysql.createPool({

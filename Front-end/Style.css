@@ -1,0 +1,157 @@
+/* Importando uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset global para limpar margens e aplicar a fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo da tela com gradiente escuro moderno */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título Principal */
+h1 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* 
+   Caixa Central (Glassmorphism)
+   Serve tanto para a
+   do Cadastro quanto para a .login-box do Login
+*/
+section, .login-box {
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+padding: 40px;
+width: 90%;
+max-width: 400px;
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+text-align: center;
+margin-bottom: 50px;
+}
+
+/* Ajuste de espaçamento para o Cadastro */
+section div p {
+margin-bottom: 20px;
+}
+
+/* Ajuste de espaçamento para o Login */
+.input-group {
+margin-bottom: 20px;
+text-align: left;
+}
+
+/* Labels do form de Login */
+label {
+font-size: 0.9rem;
+color: #b0c4de;
+font-weight: 300;
+margin-bottom: 8px;
+display: inline-block;
+}
+
+/* Estilização dos Inputs (Campos de texto) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 14px 16px;
+border: none;
+border-radius: 8px;
+background: rgba(0, 0, 0, 0.25);
+color: #fff;
+font-size: 1rem;
+outline: none;
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: all 0.3s ease;
+}
+
+input::placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+border-color: #00f2fe;
+box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilização dos Botões */
+button {
+width: 100%;
+padding: 15px;
+border: none;
+border-radius: 8px;
+background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+color: #fff;
+font-size: 1.1rem;
+font-weight: 600;
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+margin-top: 10px;
+}
+
+button:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 20px rgba(0, 242, 254, 0.5);
+}
+
+button:active {
+transform: translateY(1px);
+}
+
+/* Mensagens de Retorno via JS */
+#mensagem, #resposta {
+margin-top: 20px;
+font-size: 0.95rem;
+color: #ff6b6b;
+font-weight: 600;
+min-height: 24px;
+}
+
+/* Estilização do Rodapé */
+footer {
+margin-top: auto;
+width: 100%;
+background: rgba(0, 0, 0, 0.35);
+padding: 30px 20px;
+text-align: center;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+}
+
+footer h2 {
+font-size: 1.2rem;
+color: #4facfe;
+margin-bottom: 12px;
+font-weight: 600;
+}
+
+footer p {
+font-size: 0.85rem;
+color: #a0aab2;
+line-height: 1.6;
+max-width: 600px;
+margin: 0 auto;
+}

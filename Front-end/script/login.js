@@ -24,7 +24,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
         // Verifica se deu certo ou errado
         if (resposta.ok) {
-            respostaElmensagemEl.innerText = "SUCESSO: " + dados.message;
+            respostaEl.innerText = "SUCESSO: " + dados.message;
             respostaEl.style.color = "green";
         } else {
             respostaEl.innerText = "FALHA: " + dados.message;

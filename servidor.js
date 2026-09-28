@@ -5,7 +5,7 @@ const cadastroRoutes = require('./Routes/cadastroRoute');
 
 const app = express();
 // Configuração corrigida para aceitar a porta dinâmica do Render
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Configurações para ler JSON e exibir o Frontend
 app.use(express.json());

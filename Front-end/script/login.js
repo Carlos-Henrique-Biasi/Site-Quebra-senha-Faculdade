@@ -30,6 +30,8 @@ document.getElementById('login-form').addEventListener('submit', async function(
             respostaEl.innerText = "FALHA: " + dados.message;
             respostaEl.style.color = "red";
         }
+
+        
     } catch (error) {
         alert = "Erro ao conectar com o servidor.";
     }

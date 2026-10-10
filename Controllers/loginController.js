@@ -11,7 +11,7 @@ const login = async (req, res) => {
             const usuarioDoBanco = linhas[0];
             const senhaCorreta = await criptografia.compare(senha, usuarioDoBanco.senha)
             if (senhaCorreta) {
-                res.status(200).json({ message: "Login realizado com sucesso!" });
+                res.status(200).json({ message: "Login realizado com sucesso!", id: usuarioDoBanco.id});
             } else {
                 res.status(401).json({ message: "Informações de Login incorretas." });
             }

@@ -3,7 +3,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
     // Pega os valores dos inputs
     const user = document.getElementById('username').value;
-    const senha = document.getElementById('password').value;
+    const senhaDigitada = document.getElementById('password').value;
     const respostaEl = document.getElementById('resposta');
 
    // 1. Validação do Utilizador (Não pode estar vazio ou ter apenas espaços)

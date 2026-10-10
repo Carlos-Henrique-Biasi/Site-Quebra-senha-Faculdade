@@ -155,3 +155,17 @@ line-height: 1.6;
 max-width: 600px;
 margin: 0 auto;
 }
+
+/* Estilo padrão para os links */
+a {
+    color: #00d2ff; /* Cor ciano brilhante para dar contraste com o fundo escuro */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: 600; /* Deixa a fonte um pouco mais grossa para destacar */
+    transition: all 0.3s ease; /* Cria uma transição suave para o efeito de hover */
+}
+
+/* Estilo de quando o mouse passa por cima do link */
+a:hover {
+    color: #ffffff; /* Fica branco para indicar interatividade */
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}

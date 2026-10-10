@@ -6,6 +6,13 @@ document.getElementById('login-form').addEventListener('submit', async function(
     const senha = document.getElementById('password').value;
     const respostaEl = document.getElementById('resposta');
 
+    if(user == undefined){
+        return mensagemEl.textContent = "Erro, digite um usuário"
+    }
+
+    if(senha == undefined){
+        return mensagemEl.textContent = "Erro, digite um usuário"
+    }
 
     try {
         // Envia os dados para o nosso servidor Node.js na rota /api/login
@@ -26,6 +33,10 @@ document.getElementById('login-form').addEventListener('submit', async function(
         if (resposta.ok) {
             respostaEl.innerText = "SUCESSO: " + dados.message;
             respostaEl.style.color = "green";
+            localStorage.setItem("idUsuario", dados.id);
+            setTimeout(()=>{
+                window.location.href = 'sucesso.html'
+            }, 2500)
         } else {
             respostaEl.innerText = "FALHA: " + dados.message;
             respostaEl.style.color = "red";

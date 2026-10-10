@@ -2,6 +2,7 @@ const env = require('dotenv').config()
 const express = require('express');
 const loginRoutes = require('./Routes/loginRoute');
 const cadastroRoutes = require('./Routes/cadastroRoute');
+const sucessoRoutes = require('./Routes/sucessoRoute')
 
 const app = express();
 // Configuração corrigida para aceitar a porta dinâmica do Render
@@ -14,6 +15,7 @@ app.use(express.static('Front-end'));
 // Engata o arquivo de rotas com o prefixo '/api'
 app.use('/api', loginRoutes);
 app.use('/api', cadastroRoutes);
+app.use('/api', sucessoRoutes)
 
 // Inicia o servidor
 app.listen(PORT, () => {

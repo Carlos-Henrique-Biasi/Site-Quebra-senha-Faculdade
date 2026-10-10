@@ -6,6 +6,14 @@ document.getElementById('botaoCadastro').addEventListener('click', async functio
     const senhaDigitada = document.getElementById('inputSenha').value;
     const mensagemEl = document.getElementById('mensagem');
 
+    if(user == undefined){
+        return mensagemEl.textContent = "Erro, digite um usuário"
+    }
+
+    if(senhaDigitada == undefined){
+        return mensagemEl.textContent = "Erro, digite um usuário"
+    }
+
     try {
         // Envia os dados para a rota de cadastro no Node.js
         const resposta = await fetch('/api/cadastro', {

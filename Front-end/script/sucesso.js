@@ -5,14 +5,14 @@ const resposta2 = document.getElementById('verificarSenha')
 const id_Usuario = localStorage.getItem("idUsuario");
 
 
-botaoVerificar.addEventListener("click", verificarConta())
+botaoVerificar.addEventListener("click", verificarConta)
 
 async function verificarConta(){
     resposta1.textContent = ""
     resposta2.textContent = ""
 
-    const resposta = await fetch(`usuario/${id_Usuario}`)
-    const usuario = await resposta.json
+    const resposta = await fetch(`/usuario/${id_Usuario}`)
+    const usuario = await resposta.json()
     
     if(!resposta.ok){
         resposta1.textContent = "Usuário não localizado"

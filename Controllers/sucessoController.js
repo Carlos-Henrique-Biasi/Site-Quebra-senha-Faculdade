@@ -1,6 +1,6 @@
 const db = require('../Data/data.js');
 
-const login = async (req, res) => {
+const verificarUsuarioFuncao = async (req, res) => {
     const {id} = req.params
 
     try{
@@ -15,3 +15,5 @@ const login = async (req, res) => {
         res.status(500).json({ erro: "Erro ao buscra usuário" })
     }
 }
+
+module.exports = {verificarUsuarioFuncao}

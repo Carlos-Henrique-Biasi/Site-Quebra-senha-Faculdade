@@ -37,7 +37,7 @@ if (!regexSenha.test(senhaDigitada)) {
             },
             body: JSON.stringify({
                  username: user,
-                 senha : senha
+                 senha : senhaDigitada
                 })
         });
 

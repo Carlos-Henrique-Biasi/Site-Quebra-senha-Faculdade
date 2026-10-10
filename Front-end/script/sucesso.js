@@ -11,7 +11,7 @@ async function verificarConta(){
     resposta1.textContent = ""
     resposta2.textContent = ""
 
-    const resposta = await fetch(`/usuario/${id_Usuario}`)
+    const resposta = await fetch(`api/usuario/${id_Usuario}`)
     const usuario = await resposta.json()
     
     if(!resposta.ok){
